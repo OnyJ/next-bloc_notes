@@ -1,13 +1,13 @@
 import React from "react";
-import "./App.css";
-import ControlledComponent from "./components/MarkdownList/controlledComponent";
+import MarkdownInput from "./components/MarkdownInput";
+import NoteDisplay from "./components/NoteDisplay";
 
 function App() {
   return (
     <div>
-      <ControlledComponent />
-      <p></p>
-      <p></p>
+      <h1>Notepad</h1>
+      <NoteDisplay />
+      <MarkdownInput />
     </div>
   );
 }
