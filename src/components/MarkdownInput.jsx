@@ -12,6 +12,7 @@ const MarkdownInput = () => {
       });
     return [input, handleInputChange];
   };
+
   const [input, handleInputChange] = useInputChange();
 
   return (
