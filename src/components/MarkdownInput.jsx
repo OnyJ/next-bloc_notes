@@ -28,10 +28,11 @@ const MarkdownInput = () => {
           />
         </div>
         <div>
-          <input
-            type="text"
+          <textarea
             name="content"
             placeholder="Text..."
+            rows="4"
+            cols=""
             onChange={handleInputChange}
           />
         </div>
