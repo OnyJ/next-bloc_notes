@@ -8,7 +8,7 @@ Website link :
 
 ## How to use Markdown ?
 
-- **Back to line** : write multiple space characters
+- **Back to line** : write multiple space characters at the end of the line
 
 ## Tools used for this project
 
