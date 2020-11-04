@@ -13,13 +13,29 @@ const NoteEdition = () => {
     return [input, handleInputChange];
   };
 
+  const saveNote = (e) => {
+    e.preventDefault();
+    localStorage.setItem("note-" + input.title, JSON.stringify(input));
+  };
+
+  const deleteNote = () => {
+    localStorage.removeItem("note-" + input.title);
+  };
+
+  const deleteAllNotes = () => {
+    for (let i = 0; i < localStorage.length; i++) {
+      const item = localStorage.key(i);
+      if (item.includes("note-")) localStorage.removeItem(item);
+    }
+  };
+
   const [input, handleInputChange] = useInputChange();
 
   return (
     <>
       <NoteDisplay note={input} />
       <h2>Markdown Input : </h2>
-      <form>
+      <form onSubmit={saveNote}>
         <div>
           <input
             type="text"
@@ -37,7 +53,13 @@ const NoteEdition = () => {
             onChange={handleInputChange}
           />
         </div>
+        <div>
+          <input type="submit" value="Save" />
+        </div>
       </form>
+      <button onClick={deleteNote}>delete</button>
+      <br />
+      <button onClick={deleteAllNotes}>delete my notes</button>
     </>
   );
 };
