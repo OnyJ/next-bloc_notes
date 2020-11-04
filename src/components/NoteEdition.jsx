@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import NoteDisplay from "./NoteDisplay";
 
-const MarkdownInput = () => {
+const NoteEdition = () => {
   const useInputChange = () => {
     const [input, setInput] = useState({});
     const handleInputChange = (e) =>
@@ -42,4 +42,4 @@ const MarkdownInput = () => {
   );
 };
 
-export default MarkdownInput;
+export default NoteEdition;
