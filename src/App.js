@@ -6,7 +6,6 @@ function App() {
   return (
     <div>
       <h1>Notepad</h1>
-      <NoteDisplay />
       <MarkdownInput />
     </div>
   );

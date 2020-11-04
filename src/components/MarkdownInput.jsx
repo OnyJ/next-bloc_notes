@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import NoteDisplay from "./NoteDisplay";
 
 const MarkdownInput = () => {
   const useInputChange = () => {
@@ -11,14 +12,13 @@ const MarkdownInput = () => {
       });
     return [input, handleInputChange];
   };
-
   const [input, handleInputChange] = useInputChange();
 
   return (
     <>
+      <NoteDisplay note={input} />
       <h2>Markdown Input : </h2>
       <form>
-        <h3>{input.title && "Title : " + input.title}</h3>
         <div>
           <input
             type="text"
@@ -27,12 +27,10 @@ const MarkdownInput = () => {
             onChange={handleInputChange}
           />
         </div>
-
-        <h4>{input.text && "Text : " + input.text}</h4>
         <div>
           <input
             type="text"
-            name="text"
+            name="content"
             placeholder="Text..."
             onChange={handleInputChange}
           />
