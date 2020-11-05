@@ -13,3 +13,8 @@ Website link :
 ## Tools used for this project
 
 - Showdown : https://github.com/showdownjs/showdown
+
+## Articles to write better code
+
+- Index as a key is an anti-pattern : https://medium.com/@robinpokorny/index-as-a-key-is-an-anti-pattern-e0349aece318  
+  -> generate ids with https://github.com/ai/nanoid/
