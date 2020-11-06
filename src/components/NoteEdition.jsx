@@ -25,7 +25,10 @@ const NoteEdition = () => {
   const deleteAllNotes = () => {
     for (let i = 0; i < localStorage.length; i++) {
       const item = localStorage.key(i);
-      if (item.includes("note-")) localStorage.removeItem(item);
+      if (item.includes("note-")) {
+        localStorage.removeItem(item);
+        i = 0;
+      }
     }
   };
 
