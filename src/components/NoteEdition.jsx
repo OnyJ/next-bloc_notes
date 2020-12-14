@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import NoteDisplay from "./NoteDisplay";
 
-const NoteEdition = () => {
+export default function NoteEdition() {
   const useInputChange = () => {
     const [input, setInput] = useState({});
     const handleInputChange = (e) =>
@@ -24,10 +24,10 @@ const NoteEdition = () => {
 
   const deleteAllNotes = () => {
     for (let i = 0; i < localStorage.length; i++) {
-      const item = localStorage.key(i);
-      if (item.includes("note-")) {
-        localStorage.removeItem(item);
-        i = 0;
+      const itemName = localStorage.key(i);
+      if (itemName.includes("note-")) {
+        localStorage.removeItem(itemName);
+        i--;
       }
     }
   };
@@ -67,4 +67,4 @@ const NoteEdition = () => {
   );
 };
 
-export default NoteEdition;
+// export default NoteEdition;
